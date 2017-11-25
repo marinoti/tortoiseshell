@@ -47,10 +47,14 @@ header .container {
   padding: 1rem 1rem 1rem 2rem;
 }
 
- ul li {
+ .nav ul li{
   display: inline;
   font-weight: bold;
   padding-right: 2rem;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 /* ##### Header Headline #####*/
@@ -63,7 +67,6 @@ header .flex {
   padding: 1.5rem 5rem;
   margin-right: -2rem;
   margin-top: 10rem;
-  display: inline-block;
 }
 
 .headline h1 {
@@ -129,4 +132,104 @@ footer img {
   height: 1.5rem;
   width: auto;
   padding-right: 1rem;
+}
+
+/* ##### Media Queries ##### */
+
+@media only screen and (max-width: 1024px) {
+.container {
+  width: 100%;
+}
+
+header {
+  height: 22rem;
+}
+
+header .container {
+  padding: 0;
+}
+
+.headline {
+  background-color: white;
+  padding: 0.75rem 4rem;
+  margin-right: 2rem;
+  margin-top: 5rem;
+}
+
+.headline h1 {
+  font-size: 1.33rem;
+  line-height: 2.4rem;
+}
+}
+
+@media only screen and (max-width: 470px) {
+.container {
+  width: 100%;
+}
+
+.logo span {
+  display: none;
+}
+
+.nav ul.desktop-nav {
+  display: none;
+}
+
+.nav ul.mobile-nav {
+  display: block;
+  text-align: center;
+}
+
+header {
+  height: 17rem;
+  background-position: 20%;
+}
+
+.headline {
+  margin: 9rem auto 2rem auto;
+  width: 100%;
+  padding: 1rem;
+}
+
+.headline h1 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.supporting {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 3.77rem;
+}
+
+.service {
+  height: auto;
+  margin: 1.54rem;
+  font-size: .77rem;
+}
+
+.info {
+  width: auto;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  max-width: 100%;
+}
+
+.info p {
+  font-size: 0.77rem;
+  padding-top: 1rem;
+}
+
+/* ##### Footer #### */
+
+footer .container {
+  justify-content: center;
+}
+
+footer span {
+  display: none;
 }
